@@ -8,8 +8,14 @@ Things you may want to cover:
 * Ruby version
 
 * System dependencies
+adding devise  https://github.com/heartcombo/devise
+adding bettererrors https://github.com/BetterErrors/better_errors
+added bootstrap-sass  https://github.com/twbs/bootstrap-sass
 
 * Configuration
+this was a big pain getting rails to see my environment variable
+save it to bashrc and then 
+whatever: <%= ENV.fetch("THEVARIABLE") %> 
 
 * Database creation
 on laptop to start db

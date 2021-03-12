@@ -11,12 +11,26 @@ gem 'pg', '>= 1.1'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.4.1'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+# Use Devise for user management
+gem 'devise'
+# Use BetterErrors for nicer presentation of errors in dev
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+# Use layout in dev
+group :development do
+  gem 'rails_layout'
+end
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
