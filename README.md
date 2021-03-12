@@ -9,6 +9,7 @@ Things you may want to cover:
 
 * System dependencies
 adding devise  https://github.com/heartcombo/devise
+https://github.com/RailsApps/rails-devise-roles
 adding bettererrors https://github.com/BetterErrors/better_errors
 added bootstrap-sass  https://github.com/twbs/bootstrap-sass
 

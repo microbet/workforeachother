@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @order.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @order.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
