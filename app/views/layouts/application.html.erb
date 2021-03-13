@@ -13,6 +13,17 @@
   </head>
 
   <body>
+    <%= link_to "Home", root_path %>
+    <%= link_to "About Us", welcome_about_path %>
+    <%= link_to "Contact", welcome_contact_path %>
+    <% if current_user %>
+      <%= link_to 'Orders', orders_path %>
+    <% end %>
+    <% if current_user %>
+      <%= link_to "Logout", welcome_login_path %>
+    <% else %>
+      <%= link_to "Login", welcome_login_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
