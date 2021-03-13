@@ -12,14 +12,26 @@
   <% end %>
 
   <div class="control-group">
-    <%= form.label :title, class: 'control-label' %>
-    <%= form.text_control-group :title %>
+    <%= form.label :title, class: "control-label" %>
+    <div class="controls">
+      <%= form.text_field :title %>
+    </div>
   </div>
 
   <div class="control-group">
-    <%= form.label :body, class: 'control-label' %>
-    <%= form.text_area :body %>
+    <%= form.label :body, class: "control-label" %>
+    <div class="controls">
+      <%= form.text_area :body %>
+    </div>
+  </div> 
+
+  <div class="control-group">
+    <%= form.label "Skill", class: "control-label" %>
+    <div class="controls">
+      <%= form.select(:skill, options_for_select([["Construction", "Construction"], ["Health Care", "HealthCare"], ["Education", "Education"]])) %>
+    </div>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
