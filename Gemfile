@@ -30,6 +30,8 @@ end
 group :development do
   gem 'rails_layout'
 end
+# banking need money-rails
+gem 'money-rails', '~>1.12'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

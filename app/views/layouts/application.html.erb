@@ -19,11 +19,7 @@
     <% if current_user %>
       <%= link_to 'Orders', orders_path %>
     <% end %>
-    <% if current_user %>
-      <%= link_to "Logout", welcome_login_path %>
-    <% else %>
-      <%= link_to "Login", welcome_login_path %>
-    <% end %>
+    <%= link_to "Settings", welcome_login_path %>
     <%= yield %>
   </body>
 </html>

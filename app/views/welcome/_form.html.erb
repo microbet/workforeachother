@@ -1,0 +1,24 @@
+<%= form_with(model: welcome) do |form| %>
+  <% if welcome.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(welcome.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% welcome.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= form.label :add_money, class: "control-label" %>
+    <div class="controls">
+      <%= form.text_field :add_money %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
