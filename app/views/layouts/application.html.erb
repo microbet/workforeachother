@@ -18,6 +18,7 @@
     <%= link_to "Contact", welcome_contact_path %>
     <% if current_user %>
       <%= link_to 'Orders', orders_path %>
+      <%= link_to 'Deposits', deposits_path %>
     <% end %>
     <%= link_to "Settings", welcome_login_path %>
     <%= yield %>
