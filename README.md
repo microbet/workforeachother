@@ -33,5 +33,7 @@ created user "webuser" pwrd is low sec with suffix
 start rails with "rails server"
 
 * Deployment instructions
+how to do dbmigrate on production
+sudo heroku run rails db:migrate -a workforeachother
 
 * ...
