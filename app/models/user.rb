@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   end
 
   def set_balance
-    self.balance = -1
+    self["balance"] = -1
   end
 
   def make_deposit
