@@ -7,7 +7,7 @@
 <% end %>
 <%= @x %>
 <% if current_user %>
-  <p>Hello, <%= current_user.email %>.  Your account balance is: <%= current_user.balance %></p>
+  <p>Hello, <%= current_user.email %>.  Your account balance is: </p>
 <% end %>
 <%= form_for :user do |f| %>
   <%= f.submit 'Add hour' %>

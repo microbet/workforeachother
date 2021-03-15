@@ -26,8 +26,8 @@ class DepositsController < ApplicationController
     puts "amen dep param is "
     puts amended_deposit_params
     @deposit = Deposit.new(amended_deposit_params)
-    current_user.balance = deposit_params["amount"].to_d + current_user.balance
-    current_user.save
+    #current_user.balance = deposit_params["amount"].to_d + current_user.balance
+    #current_user.save
     respond_to do |format|
       if @deposit.save
         format.html { redirect_to @deposit, notice: "Deposit was successfully created." }
