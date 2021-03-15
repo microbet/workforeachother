@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin]
+  @@balance
   after_initialize :set_default_role, :if => :new_record?
   after_initialize :set_balance, :if => :new_record?
   after_create :make_deposit
@@ -10,7 +11,7 @@ class User < ActiveRecord::Base
   end
 
   def set_balance
-    self["balance"] = -1
+    self.balance = -1
   end
 
   def make_deposit
