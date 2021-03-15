@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
     self.role ||= :user
   end
 
-  def bet_balance
+  def set_balance
     self.balance = -1
   end
 
