@@ -4,6 +4,12 @@ class DepositsController < ApplicationController
   # GET /deposits or /deposits.json
   def index
     @deposits = Deposit.all
+    @balance = 0
+    @deposits.each do |d|
+      if d.user_id == current_user.id
+        @balance = @balance + d.amount
+      end
+    end
   end
 
   # GET /deposits/1 or /deposits/1.json
