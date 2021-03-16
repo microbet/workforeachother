@@ -20,6 +20,11 @@
       <%= link_to 'Orders', orders_path %>
       <%= link_to 'Deposits', deposits_path %>
     <% end %>
+    <% if current_user %>
+      <% if current_user.admin %>
+        <%= link_to "Admin", welcome_admin_path %>
+      <% end %>
+    <% end %>
     <%= link_to "Settings", welcome_login_path %>
     <%= yield %>
   </body>

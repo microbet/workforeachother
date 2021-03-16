@@ -14,6 +14,11 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @categories = Category.all
+    @selection_options = ['', '']
+    @categories.each do |category|
+      @selection_options << [category.title, category.id]
+    end
   end
 
   # GET /orders/1/edit
