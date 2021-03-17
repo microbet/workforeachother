@@ -41,4 +41,3 @@ sudo heroku run rails db:migrate -a workforeachother
 
 TODO: 
 
-I want to take skill out of orders and put in category.id

@@ -8,7 +8,7 @@
       <th>Title</th>
       <th>Body</th>
       <th>User</th>
-      <th>Skill</th>
+      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         <td><%= order.title %></td>
         <td><%= order.body %></td>
         <td><%= order.user.email %></td>
-        <td><%= order.skill %></td>
+        <td><%= order.category.title %></td>
         <td><%= link_to 'Show', order %></td>
         <% if current_user && current_user.admin %>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
