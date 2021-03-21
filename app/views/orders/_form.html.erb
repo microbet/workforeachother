@@ -29,7 +29,7 @@
     hellow<%= order.category_id %>
     <%= form.label "Category", class: "control-label" %>
     <div class="controls">
-      <%= form.select(:category_id, options_for_select(@selection_options, form.object.category_id || default_value)) %>
+      <%= form.select(:category_id, options_for_select(@selection_options, form.object.category_id || nil)) %>
     </div>
   </div>
 

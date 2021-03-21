@@ -18,5 +18,10 @@
   <%= @order.category.title %>
 </p>
 
+<p>
+  <strong>Estimated Time (hrs):</strong>
+  <%= @order.estimate %>
+</p>
+
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

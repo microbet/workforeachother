@@ -2,8 +2,6 @@ class OrdersController < ApplicationController
   before_action :set_order, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:show]
 
-  #update needs to include the estimate
-
   # GET /orders or /orders.json
   def index
     @orders = Order.all
@@ -78,6 +76,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:title, :body, :category_id)
+      params.require(:order).permit(:title, :body, :category_id, :estimate)
     end
 end
