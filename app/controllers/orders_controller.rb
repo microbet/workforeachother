@@ -2,6 +2,8 @@ class OrdersController < ApplicationController
   before_action :set_order, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:show]
 
+  #update needs to include the estimate
+
   # GET /orders or /orders.json
   def index
     @orders = Order.all
@@ -23,6 +25,11 @@ class OrdersController < ApplicationController
 
   # GET /orders/1/edit
   def edit
+    @categories = Category.all
+    @selection_options = ['', '']
+    @categories.each do |category|
+      @selection_options << [category.title, category.id]
+    end
   end
 
   # POST /orders or /orders.json
