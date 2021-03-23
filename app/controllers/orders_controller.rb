@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[ show edit update destroy ]
+  before_action :set_order, only: %i[ show edit update destroy parlay ]
   before_action :authenticate_user!, except: [:show]
 
   # GET /orders or /orders.json
@@ -9,6 +9,9 @@ class OrdersController < ApplicationController
 
   # GET /orders/1 or /orders/1.json
   def show
+  end
+
+  def parlay
   end
 
   # GET /orders/new

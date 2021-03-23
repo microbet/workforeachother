@@ -41,4 +41,4 @@ sudo heroku run rails db:migrate -a workforeachother
 
 TODO: 
 
-just a test of git
+Orders estimate of time not working on heroku, but works on dev
